@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:macOS-security-checker}",
+            "name": "Debug macOS-security-checker",
+            "target": "macOS-security-checker",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug macOS-security-checker"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:macOS-security-checker}",
+            "name": "Release macOS-security-checker",
+            "target": "macOS-security-checker",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release macOS-security-checker"
+        }
+    ]
+}
