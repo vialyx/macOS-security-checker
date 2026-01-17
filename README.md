@@ -52,20 +52,13 @@ The application displays a comprehensive security assessment with:
 
 ![Main Dashboard](screenshots/dashboard.png)
 
-### Real-time Scanning
-Watch the application scan your system in real-time:
-- Live progress indicator during scans
-- Results update as each check completes
-- Visual feedback with icons and color coding
-
-![Scanning](screenshots/scanning.png)
-
 ### Detailed Results
 Complete security check results with:
-- Individual check status for all 50+ checks
+- Individual check status for all 50+ checks with expandable hints
 - Category tags (OS Hardening, Authentication, etc.)
 - Description of each security check
-- Remediation guidance for failed items
+- Educational explanations (click chevron to expand)
+- Remediation guidance for findings
 
 ![Results](screenshots/results.png)
 
