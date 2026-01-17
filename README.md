@@ -2,6 +2,16 @@
 
 A comprehensive macOS security assessment application that runs in the menu bar and provides real-time security posture visibility.
 
+## 💝 Support This Project
+
+If you find this tool helpful, consider supporting its development:
+
+[![Donate with PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/paypalme/vialyx)
+
+**PayPal**: [Donate Here](https://www.paypal.com/paypalme/vialyx)
+
+Your support helps fund ongoing development, security improvements, and new features!
+
 ## Features
 
 ### 🛡️ 11 Security Categories
@@ -30,6 +40,34 @@ A comprehensive macOS security assessment application that runs in the menu bar 
 - ✅ One-click remediation for common issues
 - ✅ Audit trail and logging
 - ✅ MDM integration support
+
+## 📸 Screenshots
+
+### Main Dashboard
+The application displays a comprehensive security assessment with:
+- **Status Cards** - Quick overview of passed, warning, and failed checks
+- **Security Score** - Overall security posture (0-100%)
+- **Action Buttons** - Easy-to-use controls for running scans
+- **Security Checks List** - All 50+ checks with status and remediation info
+
+![Main Dashboard](screenshots/dashboard.png)
+
+### Real-time Scanning
+Watch the application scan your system in real-time:
+- Live progress indicator during scans
+- Results update as each check completes
+- Visual feedback with icons and color coding
+
+![Scanning](screenshots/scanning.png)
+
+### Detailed Results
+Complete security check results with:
+- Individual check status for all 50+ checks
+- Category tags (OS Hardening, Authentication, etc.)
+- Description of each security check
+- Remediation guidance for failed items
+
+![Results](screenshots/results.png)
 
 ## Installation & Build
 

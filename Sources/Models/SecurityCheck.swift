@@ -52,10 +52,24 @@ struct SecurityCheck: Identifiable, Codable {
     let category: SecurityCategory
     let description: String
     var status: CheckStatus
+    let hint: String?
     let remediation: String?
-    let severity: Int // 1-5, where 5 is critical
+    let severity: Int
     let enforceable: Bool
     let apis: [String]
+    
+    init(id: String, name: String, category: SecurityCategory, description: String, status: CheckStatus, hint: String? = nil, remediation: String? = nil, severity: Int, enforceable: Bool, apis: [String]) {
+        self.id = id
+        self.name = name
+        self.category = category
+        self.description = description
+        self.status = status
+        self.hint = hint
+        self.remediation = remediation
+        self.severity = severity
+        self.enforceable = enforceable
+        self.apis = apis
+    }
     
     mutating func updateStatus(_ newStatus: CheckStatus) {
         self.status = newStatus

@@ -195,6 +195,7 @@ struct StatusCard: View {
 
 struct CheckRow: View {
     let check: SecurityCheck
+    @State private var showHint = false
     
     var icon: String {
         switch check.status {
@@ -206,24 +207,44 @@ struct CheckRow: View {
     }
     
     var body: some View {
-        HStack(spacing: 10) {
-            Text(icon).font(.body)
-            
-            VStack(alignment: .leading, spacing: 2) {
-                Text(check.name).font(.body).fontWeight(.medium)
-                Text(check.description).font(.caption).foregroundColor(.secondary).lineLimit(1)
+        VStack(alignment: .leading, spacing: 0) {
+            HStack(spacing: 10) {
+                Text(icon).font(.body)
+                
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(check.name).font(.body).fontWeight(.medium)
+                    Text(check.description).font(.caption).foregroundColor(.secondary).lineLimit(1)
+                }
+                
+                Spacer()
+                
+                Text(check.category.rawValue)
+                    .font(.caption2)
+                    .padding(.horizontal, 6)
+                    .padding(.vertical, 3)
+                    .background(Color.blue.opacity(0.1))
+                    .cornerRadius(4)
+                
+                if check.hint != nil {
+                    Button(action: { showHint.toggle() }) {
+                        Image(systemName: showHint ? "chevron.up" : "chevron.down")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                }
             }
+            .padding(8)
             
-            Spacer()
-            
-            Text(check.category.rawValue)
-                .font(.caption2)
-                .padding(.horizontal, 6)
-                .padding(.vertical, 3)
-                .background(Color.blue.opacity(0.1))
-                .cornerRadius(4)
+            if showHint, let hint = check.hint {
+                Divider()
+                Text(hint)
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                    .padding(8)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
         }
-        .padding(8)
         .background(Color(.controlBackgroundColor))
         .cornerRadius(6)
     }
